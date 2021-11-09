@@ -32,4 +32,39 @@ body {
   margin: 0 0.75rem;
 }
 
+.btn-blue {
+  background-color: blue;
+}
+
+.btn-red {
+  background-color: red;
+}
+
+.btn-green {
+  background-color: green;
+}
+
+.btn {
+  background: #ff752f;
+  border-radius: 5px;
+  color: #ffb60b;
+}
+
+.text, h1, textarea {
+  color: red;
+  font-size: 20px;
+}
+
+.btnn {
+  border: 2px solid yellow;
+}
+
+.prem {
+  content: "HTML5";
+}
+
+.dern {
+  content: "React";
+}
+
 /*# sourceMappingURL=style.css.map */

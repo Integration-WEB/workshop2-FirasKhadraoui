@@ -1,3 +1,4 @@
+///////////////////////////////////////////// Exemple de cours //////////////////////////////////////////////
 $primary-color : #ff752f ;
 
 body{
@@ -43,3 +44,57 @@ $list-colors: "blue","red","green";
     }
     
 }
+
+$primary-color: #ff752f;
+.btn{
+    background: $primary-color;
+    border-radius: 5px;
+    @if lightness($primary-color)>50% {
+        color: #ffb60b;
+    }@else{
+        color: #ff1f17;
+    }
+}
+///////////////////////////////////////////////////Atelier///////////////////////////////////////////////////
+.text{
+    color: red;
+    font-size: 20px;
+}
+textarea{
+   @extend .text;
+}
+h1{
+    @extend .text
+}
+
+@mixin At($color,$width) {
+    border: $width solid $color ;
+}
+.btnn{
+    @include At(yellow,2px); 
+}
+
+$text:white;
+@function background($background-color){
+@if background-color!='white' {
+    @return white;
+}
+    @else {
+    @return black ;}
+}
+
+$langages: "HTML5","CSS3","JAVA","React";
+@function premier($list){
+    @return nth($list,1);
+    }
+@function dernier($list){
+    @return nth($list,length($list));
+    }
+    //Tester la function
+    .prem{
+        content: premier($langages);
+    }
+
+    .dern{
+        content: dernier($langages);
+    }
