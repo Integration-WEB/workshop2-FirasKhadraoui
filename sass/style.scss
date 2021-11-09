@@ -1,0 +1,45 @@
+$primary-color : #ff752f ;
+
+body{
+   color: $primary-color; 
+}
+
+.button{
+    display:  inline-block;
+    color: $primary-color;
+    text-align: center;
+    border: solid 2px $primary-color;
+}
+
+.button-alert{
+    a{
+        @extend .button;
+        border-radius: 4px;
+    }
+}
+
+@mixin inline-block($margin : 10px) {
+    display: inline-block;
+    margin-left: $margin;
+}
+#box{
+    font: {
+        weight : bold ;
+        family : algerian ;
+    }
+    @include inline-block(); // ajouter un paramétre si on veut changer la valeur par défaut exp:40px
+}
+
+@for $i from 1 through 3 {
+    .m-#{$i} {
+        margin: 0 ($i*0.25rem);
+    }
+}
+
+$list-colors: "blue","red","green";
+@each $color in $list-colors {
+    .btn-#{$color}{
+        background-color: #{$color};
+    }
+    
+}
